@@ -1,0 +1,59 @@
+PODS:
+  - ACPAnalytics (2.2.2):
+    - ACPAnalytics/iOS (= 2.2.2)
+    - ACPCore (>= 2.3.3)
+  - ACPAnalytics/iOS (2.2.2):
+    - ACPCore (>= 2.3.3)
+  - ACPCore (2.5.0):
+    - ACPCore/iOS (= 2.5.0)
+  - ACPCore/iOS (2.5.0)
+  - ACPGriffon (1.0.4):
+    - ACPCore
+    - ACPGriffon/iOS (= 1.0.4)
+  - ACPGriffon/iOS (1.0.4):
+    - ACPCore
+  - Flutter (1.0.0)
+  - flutter_acpanalytics (0.0.1):
+    - ACPAnalytics (~> 2.2)
+    - Flutter
+  - flutter_acpcore (0.0.1):
+    - ACPCore (~> 2.5)
+    - Flutter
+  - flutter_griffon (0.0.1):
+    - ACPGriffon
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `.symlinks/flutter/ios-release`)
+  - flutter_acpanalytics (from `.symlinks/plugins/flutter_acpanalytics/ios`)
+  - flutter_acpcore (from `.symlinks/plugins/flutter_acpcore/ios`)
+  - flutter_griffon (from `.symlinks/plugins/flutter_griffon/ios`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ACPAnalytics
+    - ACPCore
+    - ACPGriffon
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: ".symlinks/flutter/ios-release"
+  flutter_acpanalytics:
+    :path: ".symlinks/plugins/flutter_acpanalytics/ios"
+  flutter_acpcore:
+    :path: ".symlinks/plugins/flutter_acpcore/ios"
+  flutter_griffon:
+    :path: ".symlinks/plugins/flutter_griffon/ios"
+
+SPEC CHECKSUMS:
+  ACPAnalytics: 758867ca3bd9b01fc4b145c74c5f8ba74587b6a5
+  ACPCore: c2dc84ac0f6d63421fc4d973e75da3a7cb119ff6
+  ACPGriffon: 3dd43023e2140afc31d42b9191ac598d826ffd5c
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutter_acpanalytics: 6defc91357a7b4c292b0b67b7eda2ce8b89b02be
+  flutter_acpcore: 781971fcbde815f237f85a4fb33539ffee53ab5d
+  flutter_griffon: fb421f3bd5459124dd09500b79fef9185e777b37
+
+PODFILE CHECKSUM: c79974d4be58dbb5d99f1e41ddbd7bf007a468b3
+
+COCOAPODS: 1.7.5
