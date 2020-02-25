@@ -45,7 +45,6 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -94,7 +93,8 @@ class _MyAppState extends State<MyApp> {
             ),
             RaisedButton(
               child: Text("ACPGriffon.logLocalUI()"),
-              onPressed: () => FlutterGriffon.logLocalUILevel(ACPGriffonUILogColor.VISIBILITY_HIGH, "Log UI test message"),
+              onPressed: () => FlutterGriffon.logLocalUILevel(
+                  ACPGriffonUILogColor.VISIBILITY_HIGH, "Log UI test message"),
             ),
           ]),
         ),
