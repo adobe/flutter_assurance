@@ -46,8 +46,9 @@ class FlutterGriffon {
   }
 
   /// Displays a log message in the local-client UI interface.
-  static Future<void> logLocalUILevel(ACPGriffonUILogColor level, String message) {
-  return _channel.invokeMethod(
+  static Future<void> logLocalUILevel(
+      ACPGriffonUILogColor level, String message) {
+    return _channel.invokeMethod(
         'logLocalUILevel', {"level": level.value, "message": message ?? ""});
   }
 }
