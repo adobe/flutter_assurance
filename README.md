@@ -30,7 +30,7 @@ import 'package:flutter_griffon/flutter_griffon.dart';
 
 ##### Getting Griffon version:
  ```dart
-String version = FlutterGriffon.extensionVersion;
+String version = await FlutterGriffon.extensionVersion;
  ```
 
 ##### Starting a Griffon session:
