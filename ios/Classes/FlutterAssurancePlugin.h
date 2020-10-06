@@ -11,5 +11,5 @@ governing permissions and limitations under the License.
 
 #import <Flutter/Flutter.h>
 
-@interface FlutterGriffonPlugin : NSObject<FlutterPlugin>
+@interface FlutterAssurancePlugin : NSObject<FlutterPlugin>
 @end
