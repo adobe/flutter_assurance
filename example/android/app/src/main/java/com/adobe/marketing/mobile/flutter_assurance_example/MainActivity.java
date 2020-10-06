@@ -1,4 +1,4 @@
-package com.adobe.marketing.mobile.flutter_griffon_example;
+package com.adobe.marketing.mobile.flutter_assurance_example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

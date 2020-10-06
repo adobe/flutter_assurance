@@ -1,4 +1,4 @@
-package com.adobe.marketing.mobile.flutter_griffon_example;
+package com.adobe.marketing.mobile.flutter_assurance_example;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.adobe.marketing.mobile.AdobeCallback;
 import com.adobe.marketing.mobile.Analytics;
-import com.adobe.marketing.mobile.Griffon;
+import com.adobe.marketing.mobile.Assurance;
 import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.InvalidInitException;
 import com.adobe.marketing.mobile.Lifecycle;
@@ -30,7 +30,7 @@ public class MyApplication extends FlutterApplication implements PluginRegistry.
         MobileCore.setWrapperType(WrapperType.FLUTTER);
         
         try {
-            Griffon.registerExtension();
+            Assurance.registerExtension();
             Identity.registerExtension();
             Lifecycle.registerExtension();
             Signal.registerExtension();
