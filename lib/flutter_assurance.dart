@@ -9,7 +9,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-#import <Flutter/Flutter.h>
+import 'dart:async';
+import 'package:flutter/services.dart';
 
-@interface FlutterGriffonPlugin : NSObject<FlutterPlugin>
-@end
+/// Adobe Experience Platform Assurance API.
+class FlutterAssurance {
+  static const MethodChannel _channel = const MethodChannel('flutter_assurance');
+
+  /// Gets the current AEPAssurance extension version.
+  static Future<String> get extensionVersion async {
+    final String version = await _channel.invokeMethod('extensionVersion');
+    return version;
+  }
+
+  /// Starts a AEPAssurance session.
+  static Future<void> startSession(String url) {
+    return _channel.invokeMethod('startSession', url ?? "");
+  }
+}

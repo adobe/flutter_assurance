@@ -1,16 +1,16 @@
 PODS:
-  - ACPAnalytics (2.2.2):
-    - ACPAnalytics/iOS (= 2.2.2)
-    - ACPCore (>= 2.3.3)
-  - ACPAnalytics/iOS (2.2.2):
-    - ACPCore (>= 2.3.3)
-  - ACPCore (2.5.0):
-    - ACPCore/iOS (= 2.5.0)
-  - ACPCore/iOS (2.5.0)
-  - ACPGriffon (1.0.4):
+  - ACPAnalytics (2.3.0):
+    - ACPAnalytics/main (= 2.3.0)
+    - ACPCore (>= 2.5.0)
+  - ACPAnalytics/main (2.3.0):
+    - ACPCore (>= 2.5.0)
+  - ACPCore (2.7.5):
+    - ACPCore/main (= 2.7.5)
+  - ACPCore/main (2.7.5)
+  - AEPAssurance (1.0.0):
     - ACPCore
-    - ACPGriffon/iOS (= 1.0.4)
-  - ACPGriffon/iOS (1.0.4):
+    - AEPAssurance/iOS (= 1.0.0)
+  - AEPAssurance/iOS (1.0.0):
     - ACPCore
   - Flutter (1.0.0)
   - flutter_acpanalytics (0.0.1):
@@ -19,41 +19,41 @@ PODS:
   - flutter_acpcore (0.0.1):
     - ACPCore (~> 2.5)
     - Flutter
-  - flutter_griffon (0.0.1):
-    - ACPGriffon
+  - flutter_assurance (1.0.0):
+    - AEPAssurance (~> 1.0)
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios-release`)
+  - Flutter (from `.symlinks/flutter/ios`)
   - flutter_acpanalytics (from `.symlinks/plugins/flutter_acpanalytics/ios`)
   - flutter_acpcore (from `.symlinks/plugins/flutter_acpcore/ios`)
-  - flutter_griffon (from `.symlinks/plugins/flutter_griffon/ios`)
+  - flutter_assurance (from `.symlinks/plugins/flutter_assurance/ios`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - ACPAnalytics
     - ACPCore
-    - ACPGriffon
+    - AEPAssurance
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: ".symlinks/flutter/ios-release"
+    :path: ".symlinks/flutter/ios"
   flutter_acpanalytics:
     :path: ".symlinks/plugins/flutter_acpanalytics/ios"
   flutter_acpcore:
     :path: ".symlinks/plugins/flutter_acpcore/ios"
-  flutter_griffon:
-    :path: ".symlinks/plugins/flutter_griffon/ios"
+  flutter_assurance:
+    :path: ".symlinks/plugins/flutter_assurance/ios"
 
 SPEC CHECKSUMS:
-  ACPAnalytics: 758867ca3bd9b01fc4b145c74c5f8ba74587b6a5
-  ACPCore: c2dc84ac0f6d63421fc4d973e75da3a7cb119ff6
-  ACPGriffon: 3dd43023e2140afc31d42b9191ac598d826ffd5c
+  ACPAnalytics: 10b531c3c45f665748cf81a9e18f20266097605b
+  ACPCore: 5608edce9d9bdef01da9a19201993fdb144dccf8
+  AEPAssurance: 79480081626b89fc37af26bbbf4522af9718e75f
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_acpanalytics: 6defc91357a7b4c292b0b67b7eda2ce8b89b02be
+  flutter_acpanalytics: 91411eff9228cd3f25b721e71f9f1052e4eee5ec
   flutter_acpcore: 781971fcbde815f237f85a4fb33539ffee53ab5d
-  flutter_griffon: fb421f3bd5459124dd09500b79fef9185e777b37
+  flutter_assurance: b2d7b3dbd2920efa6020a6b8860b2170727a56a7
 
 PODFILE CHECKSUM: c79974d4be58dbb5d99f1e41ddbd7bf007a468b3
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.9.3
