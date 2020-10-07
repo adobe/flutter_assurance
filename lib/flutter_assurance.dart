@@ -10,7 +10,6 @@ governing permissions and limitations under the License.
 */
 
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 
 /// Adobe Experience Platform Assurance API.

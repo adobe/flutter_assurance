@@ -21,7 +21,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
-/** FlutterGriffonPlugin */
+/** FlutterAssurancePlugin */
 public class FlutterAssurancePlugin implements MethodCallHandler {
 
   private static final String TAG = "FlutterAssurancePlugin";
