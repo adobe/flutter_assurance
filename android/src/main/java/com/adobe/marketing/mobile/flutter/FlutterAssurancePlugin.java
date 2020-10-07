@@ -35,7 +35,7 @@ public class FlutterAssurancePlugin implements MethodCallHandler {
   @Override
   public void onMethodCall(MethodCall call, Result result) {
     if ("extensionVersion".equals(call.method)) {
-      // TODO once it is added in native code
+      result.success(Assurance.extensionVersion());
     } else if ("startSession".equals(call.method)) {
       String url = (String) call.arguments;
       if (url.isEmpty()) {
