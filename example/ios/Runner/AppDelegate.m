@@ -5,7 +5,7 @@
 #import "ACPLifecycle.h"
 #import "ACPSignal.h"
 #import "ACPAnalytics.h"
-#import "ACPGriffon.h"
+#import "AEPAssurance.h"
 
 @implementation AppDelegate
 
@@ -23,7 +23,7 @@
     [ACPCore setWrapperType:ACPMobileWrapperTypeFlutter];
     [ACPCore configureWithAppId:@"yourAppId"];
 
-    [ACPGriffon registerExtension];
+    [AEPAssurance registerExtension];
     [ACPAnalytics registerExtension];
     [ACPIdentity registerExtension];
     [ACPLifecycle registerExtension];
