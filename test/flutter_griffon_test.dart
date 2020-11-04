@@ -13,7 +13,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_griffon/flutter_griffon.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_griffon/src/acpgriffon_uilogcolor.dart';
 
 void main() {
   const MethodChannel channel = MethodChannel('flutter_griffon');
@@ -65,106 +64,6 @@ void main() {
         isMethodCall(
           'startSession',
           arguments: testUrl,
-        ),
-      ]);
-    });
-  });
-
-  group('endSession', () {
-    final List<MethodCall> log = <MethodCall>[];
-
-    setUp(() {
-      channel.setMockMethodCallHandler((MethodCall methodCall) async {
-        log.add(methodCall);
-        return null;
-      });
-    });
-
-    test('invokes correct method', () async {
-      await FlutterGriffon.endSession();
-
-      expect(log, <Matcher>[
-        isMethodCall(
-          'endSession',
-          arguments: null,
-        ),
-      ]);
-    });
-  });
-
-  group('attemptReconnect', () {
-    final List<MethodCall> log = <MethodCall>[];
-
-    setUp(() {
-      channel.setMockMethodCallHandler((MethodCall methodCall) async {
-        log.add(methodCall);
-        return null;
-      });
-    });
-
-    test('invokes correct method', () async {
-      await FlutterGriffon.attemptReconnect();
-
-      expect(log, <Matcher>[
-        isMethodCall(
-          'attemptReconnect',
-          arguments: null,
-        ),
-      ]);
-    });
-  });
-
-  group('sendEvent', () {
-    final String testVendor = "testVendor";
-    final String testType = "testType";
-    final Map testPayload = {"testKey": "testValue"};
-
-    final List<MethodCall> log = <MethodCall>[];
-
-    setUp(() {
-      channel.setMockMethodCallHandler((MethodCall methodCall) async {
-        log.add(methodCall);
-        return null;
-      });
-    });
-
-    test('invokes correct method', () async {
-      await FlutterGriffon.sendEvent(testVendor, testType, testPayload);
-
-      expect(log, <Matcher>[
-        isMethodCall(
-          'sendEvent',
-          arguments: {
-            "vendor": testVendor,
-            "type": testType,
-            "payload": testPayload
-          },
-        ),
-      ]);
-    });
-  });
-
-  group('logLocalUILevel', () {
-    final ACPGriffonUILogColor testLogColor =
-        ACPGriffonUILogColor.VISIBILITY_LOW;
-    final String testMessage = "testMessage";
-
-    final List<MethodCall> log = <MethodCall>[];
-
-    setUp(() {
-      channel.setMockMethodCallHandler((MethodCall methodCall) async {
-        log.add(methodCall);
-        return null;
-      });
-    });
-
-    test('invokes correct method', () async {
-      await FlutterGriffon.logLocalUILevel(testLogColor, testMessage);
-
-      expect(log, <Matcher>[
-        isMethodCall(
-          'logLocalUILevel',
-          arguments: {"level": testLogColor.value, "message": testMessage},
         ),
       ]);
     });

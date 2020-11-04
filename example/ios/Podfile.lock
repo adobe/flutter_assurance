@@ -1,16 +1,16 @@
 PODS:
-  - ACPAnalytics (2.2.2):
-    - ACPAnalytics/iOS (= 2.2.2)
-    - ACPCore (>= 2.3.3)
-  - ACPAnalytics/iOS (2.2.2):
-    - ACPCore (>= 2.3.3)
-  - ACPCore (2.5.0):
-    - ACPCore/iOS (= 2.5.0)
-  - ACPCore/iOS (2.5.0)
-  - ACPGriffon (1.0.4):
+  - ACPAnalytics (2.4.0):
+    - ACPAnalytics/main (= 2.4.0)
+    - ACPCore (>= 2.5.0)
+  - ACPAnalytics/main (2.4.0):
+    - ACPCore (>= 2.5.0)
+  - ACPCore (2.7.6):
+    - ACPCore/main (= 2.7.6)
+  - ACPCore/main (2.7.6)
+  - ACPGriffon (1.2.1):
     - ACPCore
-    - ACPGriffon/iOS (= 1.0.4)
-  - ACPGriffon/iOS (1.0.4):
+    - ACPGriffon/iOS (= 1.2.1)
+  - ACPGriffon/iOS (1.2.1):
     - ACPCore
   - Flutter (1.0.0)
   - flutter_acpanalytics (0.0.1):
@@ -24,20 +24,20 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
-  - Flutter (from `.symlinks/flutter/ios-release`)
+  - Flutter (from `.symlinks/flutter/ios`)
   - flutter_acpanalytics (from `.symlinks/plugins/flutter_acpanalytics/ios`)
   - flutter_acpcore (from `.symlinks/plugins/flutter_acpcore/ios`)
   - flutter_griffon (from `.symlinks/plugins/flutter_griffon/ios`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - ACPAnalytics
     - ACPCore
     - ACPGriffon
 
 EXTERNAL SOURCES:
   Flutter:
-    :path: ".symlinks/flutter/ios-release"
+    :path: ".symlinks/flutter/ios"
   flutter_acpanalytics:
     :path: ".symlinks/plugins/flutter_acpanalytics/ios"
   flutter_acpcore:
@@ -46,9 +46,9 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_griffon/ios"
 
 SPEC CHECKSUMS:
-  ACPAnalytics: 758867ca3bd9b01fc4b145c74c5f8ba74587b6a5
-  ACPCore: c2dc84ac0f6d63421fc4d973e75da3a7cb119ff6
-  ACPGriffon: 3dd43023e2140afc31d42b9191ac598d826ffd5c
+  ACPAnalytics: 52e8f48bf9a2a2e0717d11adda2f1833657d95fd
+  ACPCore: 2517163496bbda74b6405f683bbbaa7201ce5cf6
+  ACPGriffon: 5b46aa44e9667b1ff5d35aa37a84992b58d2aadf
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   flutter_acpanalytics: 6defc91357a7b4c292b0b67b7eda2ce8b89b02be
   flutter_acpcore: 781971fcbde815f237f85a4fb33539ffee53ab5d
@@ -56,4 +56,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c79974d4be58dbb5d99f1e41ddbd7bf007a468b3
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.10.0
