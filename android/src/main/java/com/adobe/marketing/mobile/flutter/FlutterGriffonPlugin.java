@@ -14,10 +14,7 @@ package com.adobe.marketing.mobile.flutter;
 import android.util.Log;
 
 import com.adobe.marketing.mobile.Griffon;
-import com.adobe.marketing.mobile.GriffonEvent;
-import com.adobe.marketing.mobile.MobileCore;
 
-import java.util.Map;
 
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
