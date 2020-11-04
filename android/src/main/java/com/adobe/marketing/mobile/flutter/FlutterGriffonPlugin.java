@@ -48,50 +48,8 @@ public class FlutterGriffonPlugin implements MethodCallHandler {
       }
       Griffon.startSession(url);
       result.success(null);
-    } else if ("endSession".equals(call.method)) {
-      Griffon.endSession();
-      result.success(null);
-    } else if ("sendEvent".equals(call.method)) {
-      handleSendEvent(call.arguments);
-      result.success(null);
-    } else if ("attemptReconnect".equals(call.method)) {
-      Griffon.attemptReconnect();
-      result.success(null);
-    } else if ("logLocalUILevel".equals(call.method)) {
-      handleLogLocalUILevel(call.arguments);
-      result.success(null);
     } else {
       result.notImplemented();
-    }
-  }
-
-  private void handleSendEvent(Object arguments) {
-    if (arguments instanceof Map) {
-      Map args = (Map) arguments;
-      if (args.containsKey("vendor") && args.containsKey("type") && args.containsKey("payload")) {
-        String vendor = (String) args.get("vendor");
-        String type = (String) args.get("type");
-        Map payload = (Map) args.get("payload");
-
-        GriffonEvent event = new GriffonEvent(vendor, type, payload);
-        Griffon.sendEvent(event);
-      }
-    } else {
-      Log.e(TAG, "Unable to send event, argument parsing failed");
-    }
-  }
-
-  private void handleLogLocalUILevel(Object arguments) {
-    if (!(arguments instanceof Map)) {
-      return;
-    }
-
-    Map params =  (Map)arguments;
-    String visibilityInInt = (String) params.get("level");
-    String message = (String) params.get("message");
-    Griffon.UILogColorVisibility visibility = FlutterGriffonDataBridge.getVisibilityFromInt(visibilityInInt);
-    if (visibility != null && message != null) {
-      Griffon.logLocalUI(visibility, message);
     }
   }
 }

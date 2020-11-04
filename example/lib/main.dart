@@ -6,7 +6,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_griffon/flutter_griffon.dart';
 import 'package:flutter_acpcore/flutter_acpcore.dart';
 import 'package:flutter_acpanalytics/flutter_acpanalytics.dart';
-import 'package:flutter_griffon/src/acpgriffon_uilogcolor.dart';
 
 void main() => runApp(MyApp());
 
@@ -77,24 +76,6 @@ class _MyAppState extends State<MyApp> {
             RaisedButton(
               child: Text("ACPGriffon.startSession(...)"),
               onPressed: () => FlutterGriffon.startSession(_url_text),
-            ),
-            RaisedButton(
-              child: Text("ACPGriffon.endSession(...)"),
-              onPressed: () => FlutterGriffon.endSession(),
-            ),
-            RaisedButton(
-              child: Text("ACPGriffon.sendEvent(...)"),
-              onPressed: () => FlutterGriffon.sendEvent("com.adobe.griffon",
-                  "Shared State Contents", {'state.data': "state"}),
-            ),
-            RaisedButton(
-              child: Text("ACPGriffon.attemptReconnect()"),
-              onPressed: () => FlutterGriffon.attemptReconnect(),
-            ),
-            RaisedButton(
-              child: Text("ACPGriffon.logLocalUI()"),
-              onPressed: () => FlutterGriffon.logLocalUILevel(
-                  ACPGriffonUILogColor.VISIBILITY_HIGH, "Log UI test message"),
             ),
           ]),
         ),

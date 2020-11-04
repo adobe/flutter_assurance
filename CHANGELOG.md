@@ -1,3 +1,8 @@
+## 1.0.0-beta.4
+
+* Fix Minor bugs
+* Keeping up with updated API's
+
 ## 1.0.0-beta.3
 
 * Fix install instructions.
