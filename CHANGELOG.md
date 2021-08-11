@@ -1,11 +1,7 @@
-## 1.0.0-beta.3
+## 1.0.1
 
-* Fix install instructions.
+* AEPAssurance Flutter SDK Initial release.
 
-## 1.0.0-beta.2
+## 1.0.0
 
-* Metadata updates.
-
-## 1.0.0-beta.1
-
-* Initial beta release.
+* AEPAssurance Flutter SDK Initial release.
