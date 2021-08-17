@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_assurance_example">
    <application
+        android:name=".App"
         android:label="flutter_assurance_example"
         android:icon="@mipmap/ic_launcher">
         <activity
