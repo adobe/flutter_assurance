@@ -1,7 +1,7 @@
 package com.example.flutter_assurance_example
 
 
-import android.util.Log.e
+import android.util.Log
 import com.adobe.marketing.mobile.*
 import io.flutter.app.FlutterApplication
 
@@ -20,10 +20,8 @@ class App : FlutterApplication() {
             Assurance.registerExtension()
             MobileCore.start { o: Any? -> MobileCore.configureWithAppID("yourAppId") }
         } catch (e: InvalidInitException) {
-//            Log.e(
-//                "MyApplication",
-//                String.format("Error while registering extensions %s", e.localizedMessage)
-//            )
+            Log.e( "MyApplication",
+                String.format("Error while registering extensions %s", e.localizedMessage))
         }
     }
 }
