@@ -11,6 +11,7 @@ import Flutter
     ACPCore.setLogLevel(ACPMobileLogLevel.verbose)
     ACPCore.configure(withAppId: "94f571f308d5/e30a9514788b/launch-44fec1a705f1-development")
     AEPAssurance.registerExtension()
+    ACPAnalytics.registerExtension()
     ACPCore.start {
         ACPCore.lifecycleStart(["extrakey":"extravalue"])
     }
