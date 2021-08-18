@@ -17,13 +17,12 @@ class FlutterAssurance {
   static const MethodChannel _channel = const MethodChannel('flutter_assurance');
 
   /// Gets the current AEPAssurance extension version.
-  static Future<String> get extensionVersion async {
-    final String version = await _channel.invokeMethod('extensionVersion');
-    return version;
-  }
+  static Future<String> get extensionVersion =>
+      _channel.invokeMethod('extensionVersion').then((value) => value!);
+
 
   /// Starts a AEPAssurance session.
   static Future<void> startSession(String url) {
-    return _channel.invokeMethod('startSession', url ?? "");
+    return _channel.invokeMethod('startSession', url);
   }
 }

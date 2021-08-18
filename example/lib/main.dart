@@ -14,7 +14,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
+  String? _platformVersion = 'Unknown';
   String _url_text = '';
 
   @override
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String assuranceVersion;
+    String? assuranceVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
       assuranceVersion = await FlutterAssurance.extensionVersion;
@@ -53,12 +53,12 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: ListView(shrinkWrap: true, children: <Widget>[
             Text('AEPAssurance version = $_platformVersion\n'),
-            RaisedButton(
+            ElevatedButton(
               child: Text("ACPCore.trackState(...)"),
               onPressed: () => FlutterACPCore.trackState("myState",
                   data: {"key1": "value1"}),
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text("ACPCore.trackAction(...)"),
               onPressed: () => FlutterACPCore.trackAction("myAction",
                   data: {"key1": "value1"}),
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
                 _url_text = text;
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text("AEPAssurance.startSession(...)"),
               onPressed: () => FlutterAssurance.startSession(_url_text),
             ),
