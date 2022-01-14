@@ -15,21 +15,31 @@ import android.util.Log;
 
 import com.adobe.marketing.mobile.Assurance;
 
+import androidx.annotation.NonNull;
+import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
 import io.flutter.plugin.common.MethodChannel.Result;
-import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 /** FlutterAssurancePlugin */
-public class FlutterAssurancePlugin implements MethodCallHandler {
+public class FlutterAssurancePlugin implements FlutterPlugin, MethodCallHandler {
 
   private static final String TAG = "FlutterAssurancePlugin";
 
-  /** Plugin registration. */
-  public static void registerWith(Registrar registrar) {
-    final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutter_assurance");
+  private MethodChannel channel;
+
+  @Override
+  public void onAttachedToEngine(@NonNull final FlutterPluginBinding binding) {
+    channel = new MethodChannel(binding.getBinaryMessenger(), "flutter_assurance");
     channel.setMethodCallHandler(new FlutterAssurancePlugin());
+  }
+
+  @Override
+  public void onDetachedFromEngine(@NonNull final FlutterPluginBinding binding) {
+    if (channel != null) {
+      channel.setMethodCallHandler(null);
+    }
   }
 
   @Override
