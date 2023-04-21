@@ -2,7 +2,7 @@
 
 [![pub package](https://img.shields.io/pub/v/flutter_assurance.svg)](https://pub.dartlang.org/packages/flutter_assurance) ![Build](https://github.com/adobe/flutter_assurance/workflows/Dart%20Unit%20Tests%20+%20Android%20Build%20+%20iOS%20Build/badge.svg) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-`flutter_assurance` is a flutter plugin for the iOS and Android [AEPAssurance SDK](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-experience-platform-assurance) to allow for integration with Flutter applications. Functionality to enable the Assurance extension is provided entirely through Dart documented below.
+`flutter_assurance` is a flutter plugin for the iOS and Android [AEPAssurance SDK](https://developer.adobe.com/client-sdks/previous-versions/documentation/platform-assurance-sdk/) to allow for integration with Flutter applications. Functionality to enable the Assurance extension is provided entirely through Dart documented below.
 
 ## Installation
 
@@ -19,11 +19,11 @@ flutter test
 ```
 
 ## Usage
-### [Assurance](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-experience-platform-assurance)
+### [Assurance](https://developer.adobe.com/client-sdks/previous-versions/documentation/platform-assurance-sdk/)
 
 ##### Registering the extension with ACPCore:
 
- > Note: It is required to initialize the SDK via native code inside your AppDelegate and MainApplication for iOS and Android respectively. For more information see how to initialize [Core](https://aep-sdks.gitbook.io/docs/getting-started/initialize-the-sdk).
+ > Note: It is required to initialize the SDK via native code inside your AppDelegate and MainApplication for iOS and Android respectively. For more information see how to initialize [Core](https://developer.adobe.com/client-sdks/previous-versions/documentation/mobile-core/api-reference/#registerextensions).
 
  ##### **iOS**
 Swift
