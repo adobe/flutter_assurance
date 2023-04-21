@@ -19,7 +19,7 @@ flutter test
 ```
 
 ## Usage
-### [Assurance](https://developer.adobe.com/client-sdks/previous-versions/documentation/platform-assurance-sdk/)
+### Assurance
 
 ##### Registering the extension with ACPCore:
 
